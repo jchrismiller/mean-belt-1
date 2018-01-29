@@ -1,0 +1,14 @@
+<router-outlet></router-outlet>
+<app-user></app-user>
+
+<p>Hi</p>
+
+<a [routerLink]="['/post', 'new']" >Add a Question</a>
+<!-- <app-post-new></app-post-new> -->
+<div class='post-list'
+	*ngFor="let post of posts"
+	>
+		<p>Title: {{ post.title }}</p>
+		<p>Content: {{ post.content }}</p>
+		<p>Date: {{ post.updatedAt | date: 'shortTime'}} </p>
+	</div>
