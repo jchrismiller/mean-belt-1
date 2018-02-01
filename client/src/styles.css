@@ -1,5 +1,30 @@
+body{
+	font-family: "Arial";
+}
+
 .post-list{
 	font-size: 10px;
 	font-family: Arial;
 	color: blue;
+}
+td{
+	margin: 20px;
+	padding-left: 20px;
+}
+#greeting{
+	vertical-align: top;
+	display: inline-block;
+	margin: 0px;
+}
+#logout-button{
+	vertical-align: top;
+	display: inline-block;
+	float: right;
+}
+#new-question{
+	margin-left: 40px;
+}
+#padded{
+	float: right;
+	margin-right: 300px;
 }

@@ -10,6 +10,9 @@ var UserSchema = new mongoose.Schema({
 	},
 
 	posts: [ { type: Schema.Types.ObjectId, ref: "Post"} ],
+
+	answers: [ { type: Schema.Types.ObjectId, ref: "Answer"} ],
+
 }, { timestamps: true });
 
 var User = mongoose.model('User', UserSchema);

@@ -10,13 +10,15 @@ var PostSchema = new mongoose.Schema({
 	},
 
 	content: {
-		type: String,
-		required: [true, 'Content is required.']
+		type: String
 	},
 
 	userid: {type: Schema.Types.ObjectId, ref: "User"},
 
-}, { timestamps: true});
+	answers: [{type: Schema.Types.ObjectId, ref: "Answer"}],
+
+
+}, { timestamps: true, usePushEach: true });
 
 module.exports = mongoose.model('Post', PostSchema);
 

@@ -1,8 +1,13 @@
+<app-user-logout></app-user-logout>
+<div id = "new-question">
+	<h3>New Question</h3>
+
 <form (submit)="onSubmit(); 
 	createPost.resetForm()" 
 	#createPost="ngForm">
-
-	Title: <input 
+<p>
+	Question: <input 
+	id = "padded"
 	name="title"
 	required
 	minlength="1"
@@ -11,10 +16,11 @@
 	#title="ngModel" />
 
 	{{ title.errors | json }}
-
-	Content: <textarea
+</p>
+<p>
+	Description (optional): <textarea
+	id = "padded"
 	name="content"
-	required
 	minlength="1"
 	maxlength="300"
 	[(ngModel)]="post.content"
@@ -23,9 +29,10 @@
 
 	</textarea>
 	{{ content.errors | json }}
-
+</p>
 	<button type="submit">
 		Create Post		
 	</button>
 	
 </form>
+</div>

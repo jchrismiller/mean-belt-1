@@ -12,7 +12,7 @@ export class UserService {
   	this._http.post('/users', user).subscribe(
   		(res) => {
   			const user = res.json();
-
+        console.log("Hi Error User!");
   			this.currentUser = user;
 
   			callback(this.getCurrentUser);
@@ -30,7 +30,7 @@ export class UserService {
         if (user) {
           this.currentUser = user;
         }
-
+        // console.log(user.name)
         callback(user);
       },
       (err) => {
@@ -50,5 +50,4 @@ export class UserService {
   			errorback(err);
   		})
   }
-
 }

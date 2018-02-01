@@ -35,7 +35,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".post-list{\n\tfont-size: 10px;\n\tfont-family: Arial;\n\tcolor: blue;\n}", ""]);
+exports.push([module.i, "body{\n\tfont-family: \"Arial\";\n}\n\n.post-list{\n\tfont-size: 10px;\n\tfont-family: Arial;\n\tcolor: blue;\n}\n\ntd{\n\tmargin: 20px;\n\tpadding-left: 20px;\n}\n\n#greeting{\n\tvertical-align: top;\n\tdisplay: inline-block;\n\tmargin: 0px;\n}\n\n#logout-button{\n\tvertical-align: top;\n\tdisplay: inline-block;\n\tfloat: right;\n}\n\n#new-question{\n\tmargin-left: 40px;\n}\n\n#padded{\n\tfloat: right;\n\tmargin-right: 300px;\n}", ""]);
 
 // exports
 

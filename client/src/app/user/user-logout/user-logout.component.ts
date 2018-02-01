@@ -8,6 +8,7 @@ import { UserService } from '../user.service';
   styleUrls: ['./user-logout.component.css']
 })
 export class UserLogoutComponent implements OnInit {
+  name: String;
 
   constructor(
   	private _route: Router,
@@ -15,6 +16,7 @@ export class UserLogoutComponent implements OnInit {
   	) { }
 
   ngOnInit() {
+
   }
 
   logout() {
@@ -28,5 +30,4 @@ export class UserLogoutComponent implements OnInit {
   	)
 
   }
-
 }

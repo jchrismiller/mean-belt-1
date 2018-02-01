@@ -1,0 +1,43 @@
+<app-user-logout></app-user-logout>
+
+<p><a [routerLink]="['/dashboard']" >Home</a></p>
+
+
+<div id = "new-question">
+	<h3>New Answer</h3>
+
+<form (submit)="onSubmit($event); 
+	createAnswer.resetForm()" 
+	#createAnswer="ngForm">
+<p>
+	Answer: <input 
+	id = "padded"
+	name="content"
+	required
+	minlength="1"
+	maxlength="20"
+	[(ngModel)]="answer.content"
+	#content="ngModel" />
+
+	{{ answer.errors | json }}
+</p>
+<p>
+	Details (optional): <textarea
+	id = "padded"
+	name="details"
+	minlength="1"
+	maxlength="300"
+	[(ngModel)]="answer.details"
+	#details="ngModel" >
+		
+
+	</textarea>
+	{{ details.errors | json }}
+</p>
+	<button type="submit">
+		Submit Answer	
+	</button>
+	
+</form>
+
+</div>

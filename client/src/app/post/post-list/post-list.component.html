@@ -1,14 +1,49 @@
-<router-outlet></router-outlet>
-<app-user></app-user>
+<app-user-logout></app-user-logout>
 
-<p>Hi</p>
+<p id="greeting">Hi {{ user.name }}</p>
 
-<a [routerLink]="['/post', 'new']" >Add a Question</a>
+
+<p><a [routerLink]="['/post', 'new']" >Add a Question</a></p>
 <!-- <app-post-new></app-post-new> -->
-<div class='post-list'
-	*ngFor="let post of posts"
-	>
-		<p>Title: {{ post.title }}</p>
+<div class='post-list'>
+	<table>
+		<thead>
+			<tr>
+				<th>
+					Question
+				</th>
+				<th>
+					Answers
+				</th>
+				<th>
+					Action
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let post of posts">
+				<td>
+					{{ post.title }}
+				</td>
+				<td>
+					3
+				</td>
+				<td>
+					<a [routerLink]="['/post', 'show', post._id]" >show</a>
+				</td>
+				<td>
+					<a [routerLink]="['/post', post._id, 'answer']">answer</a>
+				</td>					
+				<td>
+					<button id = "delete-button" (click)="delete(post._id)">delete</button>
+				</td>
+			</tr>			
+		</tbody>
+	</table>
+
+
+<!-- 		<p>Title: {{ post.title }}</p>
 		<p>Content: {{ post.content }}</p>
 		<p>Date: {{ post.updatedAt | date: 'shortTime'}} </p>
+		<p>Author: {{ post.user_id }}</p> -->
 	</div>

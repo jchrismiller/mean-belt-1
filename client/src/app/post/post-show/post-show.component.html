@@ -1,0 +1,17 @@
+<app-user-logout></app-user-logout>
+
+<p><a [routerLink]="['/dashboard']" >Home</a></p>
+
+<h3>{{ post.title }}</h3>
+<p>{{ post.content }}</p>
+
+<div *ngFor="let answer of answers">
+	<div>
+		<fieldset>
+			<legend>Answer</legend>
+		<p>{{ answer.content }}</p>
+		<p>{{ answer.details }}</p>
+		<p>{{ answer._user.name }}</p>
+		</fieldset>
+	</div>
+</div>
